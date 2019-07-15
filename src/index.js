@@ -10,7 +10,6 @@ export class LandingPage extends Component {
   render () {
     return (
       <Fragment>
-        <button type="button" class="btn btn-primary">Primary</button>
         <Navbar />
       </Fragment>
     )

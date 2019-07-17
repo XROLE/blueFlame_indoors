@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
 
 export class LandingPage extends Component {
   constructor (props) {
@@ -11,6 +12,7 @@ export class LandingPage extends Component {
     return (
       <Fragment>
         <Navbar />
+        <SearchBar />
       </Fragment>
     )
   }

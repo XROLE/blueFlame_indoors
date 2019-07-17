@@ -1,3 +1,49 @@
-.nav {
-  background-color: red;
+@import '../../sass/variables';
+
+.navbar-container {
+  background-color: $base;
+  font-size: $primary-size;
+  .nav-section {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .navbar-nav {
+    margin-left: 13%;
+    width: 75%;
+  }
+  .nav-item {
+    margin-left: 13%;
+  }
+  .link {
+    cursor: pointer;
+  }
+
+  #brand {
+    color: $primary !important;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .highlight-on-hover:hover {
+    border-bottom: $primary 2px solid;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-container {
+    .navbar-nav {
+      margin-left: 0;
+      width: auto;
+      display: table;
+    }
+    .nav-item {
+      margin-left: 0;
+    }
+    .order {
+      display: table;
+    }
+  }
 }

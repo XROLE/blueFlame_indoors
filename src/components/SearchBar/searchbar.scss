@@ -47,7 +47,10 @@
     width: 17%;
     p {
       font-size: $primary-size;
-      cursor: pointer;
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+      }
     }
   }
 }

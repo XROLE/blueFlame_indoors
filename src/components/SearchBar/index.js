@@ -16,7 +16,11 @@ export class SearchBar extends Component {
         </form>
         <div className="search-bar-nav">
           <p> Help </p>
-          <p> Login </p>
+          <p
+            data-toggle="modal" data-target="#exampleModalCenter"
+          >
+            Login
+          </p>
           <p> Icon</p>
         </div>
       </div>

@@ -17,7 +17,7 @@ export class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item disable">
-                <a class="nav-link highlight-on-hover" href="#">About <span class="sr-only">(current)</span></a>
+                <a className="nav-link highlight-on-hover" href="#">About <span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item disable">
                 <a className="nav-link highlight-on-hover" href="#">Testimonies</a>

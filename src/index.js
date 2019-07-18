@@ -1,10 +1,14 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Modal from './components/Modal';
 
-export class LandingPage extends Component {
+
+
+export class App extends Component {
   constructor (props) {
   super(props)
   }
@@ -20,4 +24,9 @@ export class LandingPage extends Component {
   }
 }
 
-ReactDOM.render(<LandingPage />, document.getElementById('App'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+   document.getElementById('App')
+  );

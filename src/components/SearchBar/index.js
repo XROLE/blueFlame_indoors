@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignUp from '../SignUp';
 import './searchbar.scss';
 
 export class SearchBar extends Component {
@@ -17,9 +18,11 @@ export class SearchBar extends Component {
         <div className="search-bar-nav">
           <p> Help </p>
           <p
-            data-toggle="modal" data-target="#exampleModalCenter"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
           >
             Login
+            {/* <SignUp /> */}
           </p>
           <p> Icon</p>
         </div>

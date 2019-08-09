@@ -6,8 +6,6 @@ import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Modal from './components/Modal';
 
-
-
 export class App extends Component {
   constructor (props) {
   super(props)

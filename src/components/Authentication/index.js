@@ -7,14 +7,44 @@ export class Auth extends Component {
   constructor (props) {
     super (props)
     this.state = {
+      showSignUp:true,
       showSignIn: false
     }
+  }
+
+  showSignIn () {
+    return this.setState(
+      {
+        showSignUp: false,
+        showSignIn: true
+      }
+    )
+  }
+
+  showSignUp () {
+    console.log("I am a chosen one");
+    return this.setState(
+      {
+        showSignUp: true,
+        showSignIn: false
+      }
+    )
   }
   render () {
     return (
       <Modal>
-        <SignUp />
-        <SignIn />
+        {
+          this.state.showSignUp &&
+          <SignUp>
+            <p> Already have an Account? <span onClick={() => this.showSignIn()}>Sign In</span></p>
+          </SignUp>
+        }
+        {
+          this.state.showSignIn &&
+          <SignIn>
+           <p onClick={() => this.showSignUp()}> Don't have an Account? <span>Sign Up</span></p>
+          </SignIn>
+        }
       </Modal>
     )
   }

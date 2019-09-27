@@ -20,7 +20,7 @@ export class SignUp extends Component {
         </div>
         <button > Create Account</button>
         <div className="signUp-form-question-div">
-          <p> Already have an Account? <span>Sign In</span></p>
+          {this.props.children}
         </div>
       </form>
     )

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './signin.scss';
 
 export class SignIn extends Component {
+  constructor (props) {
+    super(props);
+  }
   render () {
     return (
       <form className="signIn-form">
@@ -16,7 +19,7 @@ export class SignIn extends Component {
           </div>
           <button > Create Account</button>
           <div className="signIn-form-question-div">
-            <p> Don't have an Account? <span>Sign Up</span></p>
+            {this.props.children}
           </div>
        </form>
     )

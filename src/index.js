@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import Modal from './components/Modal';
-
+import SignUp from './components/SignUp';
 export class App extends Component {
   constructor (props) {
   super(props)
@@ -16,7 +15,7 @@ export class App extends Component {
       <Fragment>
         <Navbar />
         <SearchBar />
-        <Modal />
+        <SignUp />
       </Fragment>
     )
   }

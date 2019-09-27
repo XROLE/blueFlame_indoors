@@ -24,4 +24,16 @@
     border: 1px solid $primary;
     padding: 7px 20px;
   }
+
+  &-question-div {
+    text-align: right;
+    p {
+      font-size: 12px;
+      span {
+        color: $primary;
+        cursor: pointer;
+        font-weight: bold;
+      }
+    }
+  }
 }

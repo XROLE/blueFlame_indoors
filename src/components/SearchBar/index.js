@@ -22,7 +22,6 @@ export class SearchBar extends Component {
             data-target="#exampleModalCenter"
           >
             Login
-            <SignUp />
           </p>
           <p> Icon</p>
         </div>

@@ -1,15 +1,39 @@
+import {
+  SIGNUP_IN_PROGRESS,
+  SIGNUP_SUCCESS,
+  SIGNUP_FAILURE
+} from '../actions/actionType';
+import { signUpAction } from '../actions';
+
 const defaultState = {
-  inProgress: false
+  inProgress: false,
+  user: '',
+  error: ''
 }
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case 'SIGNUP_IN_PROGRESS':
+    case SIGNUP_IN_PROGRESS: {
       return {
         ...state,
         inProgress: true,
       }
-      default:
-        return state;
+    }
+    case SIGNUP_SUCCESS: {
+      return {
+        ...state,
+        inProgress: false,
+        user: action.user
+      }
+    }
+    case SIGNUP_FAILURE: {
+      return {
+        ...state,
+        inProgress: false,
+        error: action.error
+      }
+    }
+    default:
+      return state;
   }
 }

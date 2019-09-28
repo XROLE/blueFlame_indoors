@@ -1,5 +1,6 @@
 @import '../../sass/variables.scss';
 
-.close {
-  color: $danger;
+#modal-dialog {
+  max-width: 50% !important;
 }
+

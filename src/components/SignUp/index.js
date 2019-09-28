@@ -1,8 +1,29 @@
 import React, { Component } from 'react';
-import Modal from '../Modal';
+import { connect } from 'react-redux';
+import  { signUpAction } from '../../actions';
 import './signUp.scss';
 
 export class SignUp extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      email: "",
+      userName: "",
+      password: "",
+      confirmPasswod: ""
+    }
+  }
+  handleChange (e) {
+    return this.setState({
+      [e.target.name] : e.target.value.trim()
+    })
+  }
+
+  handleSubmit (e) {
+    e.preventDefault();
+    this.props.signUp(this.state);
+    return;
+  }
   render () {
     return (
       <form className="signUp-form">
@@ -10,15 +31,18 @@ export class SignUp extends Component {
           <h5>CREATE ACCOUNT </h5>
         </div>
         <div className="signUp-form-element-container">
-          <input type="email" placeholder="Email" />
+          <input type="text" name="userName" placeholder="Userame" onChange={(e) => this.handleChange(e)}/>
         </div>
         <div className="signUp-form-element-container">
-          <input type="password" placeholder="Password" />
+          <input type="email" name="email" placeholder="Email" onChange={(e) => this.handleChange(e)}/>
         </div>
         <div className="signUp-form-element-container">
-          <input type="password" placeholder="Confirm Password" />
+          <input type="password" name="password" placeholder="Password" onChange={(e) => this.handleChange(e) }/>
         </div>
-        <button > Create Account</button>
+        <div className="signUp-form-element-container">
+          <input type="password" name="confirmPasswod" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
+        </div>
+        <button onClick = { (e) => this.handleSubmit(e) }> Create Account</button>
         <div className="signUp-form-question-div">
           {this.props.children}
         </div>
@@ -27,4 +51,10 @@ export class SignUp extends Component {
   }
 }
 
-export default SignUp;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUp: user => dispatch(signUpAction(user)),
+  }
+};
+
+export default connect(null, mapDispatchToProps)(SignUp);

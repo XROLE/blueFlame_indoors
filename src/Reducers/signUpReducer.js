@@ -1,10 +1,11 @@
+import { SIGNUP_IN_PROGRESS } from '../actions/actionType';
 const defaultState = {
   inProgress: false
 }
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case 'SIGNUP_IN_PROGRESS':
+    case SIGNUP_IN_PROGRESS:
       return {
         ...state,
         inProgress: true,

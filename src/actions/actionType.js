@@ -1,0 +1,1 @@
+export const SIGNUP_IN_PROGRESS = 'SIGNUP_IN_PROGRESS';

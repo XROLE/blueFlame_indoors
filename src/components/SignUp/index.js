@@ -43,7 +43,7 @@ export class SignUp extends Component {
         <div className="signUp-form-element-container">
           <input type="password" name="confirmPasswod" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
         </div>
-        <button onClick = { (e) => this.handleSubmit(e) }> Create Account</button>
+        <button onClick = { (e) => this.handleSubmit(e) } disabled={this.props.inProgress}> Create Account</button>
         <div className="signUp-form-question-div">
           {this.props.children}
         </div>

@@ -6,9 +6,17 @@ import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Auth from './components/Authentication';
 import Slides from './components/Slides';
+import AppSpinnerContainer from './components/AppSpinnerContainer';
 export class App extends Component {
   constructor (props) {
-  super(props)
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+
+  componentDidMount(){
+    this.setState({ loading: false })
   }
 
   render () {
@@ -18,6 +26,7 @@ export class App extends Component {
         <SearchBar />
         <Auth />
         <Slides />
+        {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
     )
   }

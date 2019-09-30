@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import  { signUpAction } from '../../actions';
+import Spinner from '../Spinner';
 import './signUp.scss';
 
 export class SignUp extends Component {
@@ -10,7 +11,7 @@ export class SignUp extends Component {
       email: "",
       userName: "",
       password: "",
-      confirmPasswod: ""
+      confirmPasswod: "",
     }
   }
   handleChange (e) {
@@ -42,14 +43,21 @@ export class SignUp extends Component {
         <div className="signUp-form-element-container">
           <input type="password" name="confirmPasswod" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
         </div>
-        <button onClick = { (e) => this.handleSubmit(e) }> Create Account</button>
+        <button onClick = { (e) => this.handleSubmit(e) } disabled={this.props.inProgress}> Create Account</button>
         <div className="signUp-form-question-div">
           {this.props.children}
+        </div>
+        <div className="signUp-form-loader-container">
+          { this.props.inProgress && <Spinner />}
         </div>
       </form>
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  inProgress: state.signUp.inProgress
+})
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -57,4 +65,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

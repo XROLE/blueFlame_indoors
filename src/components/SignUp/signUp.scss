@@ -2,7 +2,7 @@
 
 .signUp-form {
   width: 100%;
-  padding: 5% 10%;
+  padding: 2% 5%;
 
   &-header-container {
     text-align: center;
@@ -35,5 +35,9 @@
         font-weight: bold;
       }
     }
+  }
+
+  &-loader-container {
+    text-align: center;
   }
 }

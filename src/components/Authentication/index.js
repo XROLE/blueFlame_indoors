@@ -22,7 +22,6 @@ export class Auth extends Component {
   }
 
   showSignUp () {
-    console.log("I am a chosen one");
     return this.setState(
       {
         showSignUp: true,

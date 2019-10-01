@@ -11,7 +11,7 @@ export class SignUp extends Component {
       email: "",
       userName: "",
       password: "",
-      confirmPasswod: "",
+      confirmPassword: "",
     }
   }
   handleChange (e) {
@@ -41,7 +41,7 @@ export class SignUp extends Component {
           <input type="password" name="password" placeholder="Password" onChange={(e) => this.handleChange(e) }/>
         </div>
         <div className="signUp-form-element-container">
-          <input type="password" name="confirmPasswod" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
+          <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
         </div>
         <button onClick = { (e) => this.handleSubmit(e) } disabled={this.props.inProgress}> Create Account</button>
         <div className="signUp-form-question-div">

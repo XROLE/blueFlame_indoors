@@ -10,7 +10,7 @@ export class SearchBar extends Component {
           <img src="http://overstocklogo.com/image/cache/logos/blue_flame_logo_design-550x550.jpg" className = "logo"/>
         </div>
         <form className="search-bar-form">
-          <div className="search-bar-form-input-container"><input type="text" /></div>
+          <div className="search-bar-form-input-container"><input type="text" placeholder="Search for products here"/></div>
           <div>
             <button> Search </button>
           </div>

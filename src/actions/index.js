@@ -11,7 +11,6 @@ export const signUpAction = (userData) => (dispatch) => {
     "https://blueflame-indoors-api.herokuapp.com/api/v1/users", userData
   )
   .then((data) => {
-    console.log(data.data);
     localStorage.setItem('BFT-token', data.data.Token);
     return dispatch({
       type: SIGNUP_SUCCESS,
@@ -19,7 +18,7 @@ export const signUpAction = (userData) => (dispatch) => {
     })
   })
   .catch(error => {
-    console.log("This is the error from axios ", error);
+    console.log("This is the error from axios ", error.message);
     return dispatch({
       type: SIGNUP_FAILURE,
       error

@@ -5,8 +5,8 @@ import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Auth from './components/Authentication';
-import Slides from './components/Slides';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
+import LandingPageContainer from './containers/LandingPageContainer';
 export class App extends Component {
   constructor (props) {
     super(props)
@@ -25,7 +25,7 @@ export class App extends Component {
         <Navbar />
         <SearchBar />
         <Auth />
-        <Slides />
+        <LandingPageContainer />
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
     )

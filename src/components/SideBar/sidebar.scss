@@ -1,0 +1,17 @@
+.sidebar {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 13px;
+  line-height: 15px;
+
+  p {
+    cursor: pointer;
+
+  }
+
+  &-header {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

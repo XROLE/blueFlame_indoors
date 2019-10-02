@@ -18,10 +18,9 @@ export const signUpAction = (userData) => (dispatch) => {
     })
   })
   .catch(error => {
-    console.log("This is the error from axios ", error.message);
     return dispatch({
       type: SIGNUP_FAILURE,
-      error
+      error: error.response.data.error
     })
   })
 }

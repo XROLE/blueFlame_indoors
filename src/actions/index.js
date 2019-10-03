@@ -12,6 +12,7 @@ export const signUpAction = (userData) => (dispatch) => {
   )
   .then((data) => {
     localStorage.setItem('BFT-token', data.data.Token);
+    $('#exampleModalCenter').modal('hide');
     return dispatch({
       type: SIGNUP_SUCCESS,
       user: data.data

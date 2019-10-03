@@ -25,6 +25,7 @@ export class SignUp extends Component {
     this.props.signUp(this.state);
     return;
   }
+
   render () {
     return (
       <form className="signUp-form">
@@ -42,6 +43,9 @@ export class SignUp extends Component {
         </div>
         <div className="signUp-form-element-container">
           <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
+          {
+            this.props.error &&  <p className="error-placeholder"> Error: {this.props.error}</p>
+          }
         </div>
         <button onClick = { (e) => this.handleSubmit(e) } disabled={this.props.inProgress}> Create Account</button>
         <div className="signUp-form-question-div">
@@ -56,7 +60,8 @@ export class SignUp extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  inProgress: state.signUp.inProgress
+  inProgress: state.signUp.inProgress,
+  error: state.signUp.error,
 })
 
 const mapDispatchToProps = (dispatch) => {

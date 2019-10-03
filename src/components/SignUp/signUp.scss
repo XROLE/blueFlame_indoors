@@ -8,6 +8,17 @@
     text-align: center;
   }
 
+  input {
+    font-size: 12px;
+  }
+
+  .error-placeholder {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
   &-element-container {
     input {
       width: 95%;

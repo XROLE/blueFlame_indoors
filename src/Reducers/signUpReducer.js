@@ -23,6 +23,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         inProgress: false,
+        error: '',
         user: action.user
       }
     }

@@ -1,12 +1,16 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { toast } from 'react-toastify';
 import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import Auth from './components/Authentication';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
+import '../node_modules/react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 export class App extends Component {
   constructor (props) {
     super(props)

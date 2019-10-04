@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slides from '../../components/Slides';
 import SideBar from '../../components/SideBar';
+import Products from '../../components/Products';
 import './landingPageContainer.scss';
 
 export default class LandingPageContainer extends Component {
@@ -17,6 +18,7 @@ export default class LandingPageContainer extends Component {
           </div>
           <div className="col-10" >
             <Slides />
+           <Products />
           </div>
         </div>
       </div>

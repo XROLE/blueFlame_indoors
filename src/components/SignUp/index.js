@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import  { signUpAction } from '../../actions';
 import Spinner from '../Spinner';
 import './signUp.scss';
-
+import { toast } from 'react-toastify';
+import { css } from 'glamor';
 export class SignUp extends Component {
   constructor (props) {
     super(props);
@@ -14,6 +15,24 @@ export class SignUp extends Component {
       confirmPassword: "",
     }
   }
+componentDidUpdate() {
+  {
+    this.props.successMessage &&
+    toast(
+      this.props.successMessage,
+      {
+        position: toast.POSITION.TOP_CENTER,
+        bodyClassName: css({
+          background: '#FF8C00',
+          textAlign: 'center',
+          padding: '5px',
+          color: 'white'
+        })
+      }
+    )
+  }
+}
+
   handleChange (e) {
     return this.setState({
       [e.target.name] : e.target.value.trim()
@@ -62,6 +81,7 @@ export class SignUp extends Component {
 const mapStateToProps = (state) => ({
   inProgress: state.signUp.inProgress,
   error: state.signUp.error,
+  successMessage: state.signUp.user.Message
 })
 
 const mapDispatchToProps = (dispatch) => {

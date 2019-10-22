@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
@@ -34,7 +35,10 @@ export class App extends Component {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+     <App />
+     <Route path="/about" component={SearchBar} />
+    </Router>
   </Provider>,
    document.getElementById('App')
   );

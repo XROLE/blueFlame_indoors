@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { toast } from 'react-toastify';
 import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';

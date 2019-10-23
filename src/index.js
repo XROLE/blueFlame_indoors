@@ -36,8 +36,10 @@ export class App extends Component {
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-     <App />
-     <Route path="/about" component={SearchBar} />
+     <Route path="/" exact component={App} />
+     <Route path="/about" component={Navbar} />
+     <Route path="/testimonies" component={Navbar} />
+     <Route path="/howitworks" component={Navbar} />
     </Router>
   </Provider>,
    document.getElementById('App')

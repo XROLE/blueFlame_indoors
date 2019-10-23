@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { toast } from 'react-toastify';
 import store from './store';
 import Navbar from './components/Navbar';
@@ -38,7 +39,12 @@ export class App extends Component {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+     <Route path="/" exact component={App} />
+     <Route path="/about" component={Navbar} />
+     <Route path="/testimonies" component={Navbar} />
+     <Route path="/howitworks" component={Navbar} />
+    </Router>
   </Provider>,
    document.getElementById('App')
   );

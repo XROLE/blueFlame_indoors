@@ -9,6 +9,9 @@ import SearchBar from './components/SearchBar';
 import Auth from './components/Authentication';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
+import '../node_modules/react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 export class App extends Component {
   constructor (props) {
     super(props)

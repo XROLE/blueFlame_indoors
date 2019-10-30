@@ -1,0 +1,59 @@
+@import '../../sass/variables.scss';
+
+.about {
+  &-header {
+    color: $primary;
+    font-size: $sub-primary;
+    text-align: center;
+  }
+
+  &-body-1 {
+    text-align: justify;
+    line-height: 2;
+    padding: 0 10px;
+  }
+
+  &-team-container {
+    align-content: space-between;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .team-card {
+      margin: 20px auto;
+      text-align: center;
+      max-width: 259px;
+      max-height: 300px;
+    }
+
+    .team-card:hover .team-info{
+      height: 100%;
+    }
+
+    .team-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.5);
+      overflow: hidden;
+      max-width: 100%;
+      height: 0;
+      transition: .5s ease;
+    }
+
+    .text {
+      white-space: nowrap;
+      color: white;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+  }
+}

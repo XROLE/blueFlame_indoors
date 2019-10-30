@@ -9,6 +9,7 @@ import SearchBar from './components/SearchBar';
 import Auth from './components/Authentication';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
+import AboutContainer from './containers/AboutContainer';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 
 toast.configure();
@@ -41,7 +42,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
      <Route path="/" exact component={App} />
-     <Route path="/about" component={Navbar} />
+     <Route path="/about" component={AboutContainer} />
      <Route path="/testimonies" component={Navbar} />
      <Route path="/howitworks" component={Navbar} />
     </Router>

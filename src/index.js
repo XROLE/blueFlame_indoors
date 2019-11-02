@@ -10,7 +10,8 @@ import Auth from './components/Authentication';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
 import AboutContainer from './containers/AboutContainer';
-import TestimonyContainer from './containers/TestimonyContainer'
+import TestimonyContainer from './containers/TestimonyContainer';
+import HiwContainer from './containers/HiwContainer';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 
 toast.configure();
@@ -45,7 +46,7 @@ ReactDOM.render(
      <Route path="/" exact component={App} />
      <Route path="/about" component={AboutContainer} />
      <Route path="/testimonies" component={TestimonyContainer} />
-     <Route path="/howitworks" component={Navbar} />
+     <Route path="/howitworks" component={HiwContainer} />
     </Router>
   </Provider>,
    document.getElementById('App')

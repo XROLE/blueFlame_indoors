@@ -10,9 +10,9 @@ export default function Testimony () {
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/_IeQa_WbkWA"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
+          allowFullScreen>
           </iframe>
           <p  className="mt-4"> <strong>WHAT DO PEOPLE SAY ABOUT BLUE FLAME INDOORS </strong></p>
         </div>

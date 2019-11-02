@@ -1,0 +1,73 @@
+@import '../../sass/variables.scss';
+
+.hiw-container {
+  &-title {
+    text-align: center;
+
+    h2 {
+      font-size: $primary-size;
+      color: $text-color;
+    }
+  }
+
+  h3 {
+    font-size: $sub-primary;
+    font-weight: bold;
+  }
+
+  form {
+    font-size: $lower-primary;
+
+    input[type=radio], input[type=checkbox] {
+      margin: 0 15px 15px 0;
+    }
+
+    input[type=number] {
+      width: 50px;
+      text-align: center;
+      margin-bottom: 15px;
+
+    }
+
+    button {
+      border-color: $primary;
+      background-color: #ffffff;
+      border-radius: 25px;
+      padding: 5px 25px;
+      margin-top: 7px;
+      cursor: pointer;
+    }
+  }
+
+  &-result {
+    padding: 10px 20px;
+    background-color: $light-background;
+    border-left: 1px solid $input-color;
+
+    table {
+      font-size: $lower-primary;
+      width: 40%;
+
+      td {
+        padding-top: 12px;
+      }
+
+      input[type=number] {
+        width: 50px;
+        text-align: center;
+      }
+    }
+
+    button {
+      color: white;
+      border-radius: 25px;
+      padding: 5px 45px;
+      margin-top: 7px;
+      cursor: pointer;
+      border: none;
+      margin-top: 10px;
+      font-size: $lower-primary;
+      background-color: $primary;
+    }
+  }
+}

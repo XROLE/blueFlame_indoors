@@ -1,86 +1,26 @@
 import React, { Component, Fragment } from 'react';
+import { productsData } from './productsData';
+import './product.scss';
 
+console.log('I am a chosen one', productsData);
 export default class Products extends Component {
   render(){
     return(
-      <Fragment >
-        <div className="row mt-4">
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570101725/BlueFlameIndoors/BFI.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
+      <div className="row mt-4 product-container">
+        {productsData.map(product => (
+          <div className="col-4 mt-5 card-container">
+            <div className="card" style={{width: "15rem" }}>
+              <div className="card-body ">
+                <div className="image-container" style={{backgroundImage: "url(" + (product.imageUrl) + ")"}}></div>
+                <div className="cart-section mt-2">
+                  <p> #{product.price}</p>
+                  <p className="cart-link">+ To Cart</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103201/BlueFlameIndoors/BFI1.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="card" style={{width: "1312remrem"}}>
-              <div className="card-body">
-                <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103629/BlueFlameIndoors/BFI2.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103201/BlueFlameIndoors/BFI1.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row mt-4">
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570101725/BlueFlameIndoors/BFI.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103201/BlueFlameIndoors/BFI1.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="card" style={{width: "1312remrem"}}>
-              <div className="card-body">
-                <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103629/BlueFlameIndoors/BFI2.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-3">
-            <div className="card" style={{width: "12rem"}}>
-              <div className="card-body">
-              <img style={{ width: "100%"}} src="https://res.cloudinary.com/xrole/image/upload/v1570103201/BlueFlameIndoors/BFI1.png" />
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Fragment>
-    )
+        ))};
+      </div>
+    );
   }
 }

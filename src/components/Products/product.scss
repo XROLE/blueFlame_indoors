@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+
+.product-container {
+  .card-container { height: 200px;}
+  .card {
+    height: 100%;
+  }
+
+
+  .image-container {
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .cart-section {
+    font-weight: bolder;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+
+    .cart-link {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}

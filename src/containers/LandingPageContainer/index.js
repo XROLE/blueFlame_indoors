@@ -22,6 +22,6 @@ export default class LandingPageContainer extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

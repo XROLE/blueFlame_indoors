@@ -36,7 +36,7 @@ export class App extends Component {
         <LandingPageContainer />
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
-    )
+    );
   }
 }
 

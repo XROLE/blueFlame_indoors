@@ -6,7 +6,7 @@ import './landingPageContainer.scss';
 
 export default class LandingPageContainer extends Component {
   constructor (props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -16,7 +16,7 @@ export default class LandingPageContainer extends Component {
           <div className="col-2 landing-page-container-side-bar">
             <SideBar />
           </div>
-          <div className="col-10" >
+          <div className="col-10 landing-page-container-main-content" >
             <Slides />
            <Products />
           </div>

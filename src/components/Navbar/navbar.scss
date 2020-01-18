@@ -3,6 +3,7 @@
 .navbar-container {
   background-color: $base;
   font-size: $primary-size;
+
   .nav-section {
     width: 80%;
     margin: 0 auto;
@@ -11,6 +12,7 @@
   .navbar-nav {
     margin-left: 13%;
     width: 75%;
+    height: 7%;
   }
   .nav-item {
     margin-left: 13%;

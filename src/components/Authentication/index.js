@@ -5,11 +5,11 @@ import SignIn from '../SignIn';
 
 export class Auth extends Component {
   constructor (props) {
-    super (props)
+    super (props);
     this.state = {
       showSignUp:true,
       showSignIn: false
-    }
+    };
   }
 
   showSignIn () {
@@ -18,7 +18,7 @@ export class Auth extends Component {
         showSignUp: false,
         showSignIn: true
       }
-    )
+    );
   }
 
   showSignUp () {
@@ -27,7 +27,7 @@ export class Auth extends Component {
         showSignUp: true,
         showSignIn: false
       }
-    )
+    );
   }
   render () {
     return (
@@ -45,7 +45,7 @@ export class Auth extends Component {
           </SignIn>
         }
       </Modal>
-    )
+    );
   }
 }
 

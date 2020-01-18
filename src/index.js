@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 import store from './store';
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
-import Auth from './components/Authentication';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
 import AboutContainer from './containers/AboutContainer';
@@ -17,14 +16,14 @@ import '../node_modules/react-toastify/dist/ReactToastify.css';
 toast.configure();
 export class App extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       loading: true
-    }
+    };
   }
 
   componentDidMount(){
-    this.setState({ loading: false })
+    this.setState({ loading: false });
   }
 
   render () {
@@ -32,7 +31,6 @@ export class App extends Component {
       <Fragment>
         <Navbar />
         <SearchBar />
-        <Auth />
         <LandingPageContainer />
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>

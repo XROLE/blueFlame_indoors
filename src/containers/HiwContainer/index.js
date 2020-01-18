@@ -10,6 +10,6 @@ export default class HiwContainer extends Component {
       <Navbar />
       <SearchBar />
       <Hiw />
-    </Fragment>)
+    </Fragment>);
   }
 }

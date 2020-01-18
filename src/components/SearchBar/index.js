@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Auth from '../../components/Authentication';
 import { connect } from 'react-redux';
 import './searchbar.scss';
 
@@ -8,45 +9,52 @@ export class SearchBar extends Component {
 
     this.state = {
       login:false
-    }
+    };
   }
 
   logout (){
-    localStorage.removeItem('BFT-token')
+    localStorage.removeItem('BFT-token');
     return window.location.reload();
   }
 
   render () {
     return (
       <div className="search-bar">
-        <div className="search-bar-logo-container">
-          <img src="http://overstocklogo.com/image/cache/logos/blue_flame_logo_design-550x550.jpg" className = "logo"/>
-        </div>
-        <form className="search-bar-form">
-          <div className="search-bar-form-input-container"><input type="text" placeholder="Search for products here"/></div>
-          <div>
-            <button> Search </button>
+        <div className="control-container">
+          <div className="search-bar-logo-container">
+            <div className="image-container">
+              <div className="image-container-2">
+               <img src="http://overstocklogo.com/image/cache/logos/blue_flame_logo_design-550x550.jpg" className = "logo"/>
+              </div>
+            </div>
           </div>
-        </form>
-        <div className="search-bar-nav">
-          <p> Help </p>
-          {
-            !localStorage.getItem('BFT-token') ?
-              <p
-                data-toggle="modal"
-                data-target="#exampleModalCenter"
-              >
-              Login
-              </p> :
-              <p onClick={() => this.logout()}>
-                Logout
-              </p>
+          <form className="search-bar-form">
+            <div className="search-bar-form-input-container"><input type="text" placeholder="Search for products here"/></div>
+            <div>
+              <button> Search </button>
+            </div>
+          </form>
+          <div className="search-bar-nav">
+            <p> Help </p>
+            {
+              !localStorage.getItem('BFT-token') ?
+                <p
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                >
+                Login
+                </p> :
+                <p onClick={() => this.logout()}>
+                  Logout
+                </p>
 
-          }
-          <p> Icon</p>
+            }
+            <p> Icon</p>
+          </div>
+          <Auth />
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -12,7 +12,7 @@ const Modal = (props) => {
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 export default Modal;

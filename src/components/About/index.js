@@ -3,7 +3,7 @@ import './about.scss'
 export default class About extends Component {
   render() {
     return (
-      <div className="about container mt-4">
+      <div className="about container">
         <div className="row">
           <div className="col-12">
             <h3 className="about-header"> ABOUT </h3>

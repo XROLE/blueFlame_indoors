@@ -3,7 +3,7 @@ import './testimony.scss';
 
 export default function Testimony () {
   return (
-    <div className="container testimony mt-4">
+    <div className="container testimony">
       <div className="testimony-container">
         <div className="positining-container">
         <iframe

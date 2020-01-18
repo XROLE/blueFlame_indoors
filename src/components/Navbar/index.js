@@ -9,7 +9,7 @@ export class Navbar extends Component {
 
   render () {
     return (
-      <div className="navbar-container">
+      <div className="navbar-container fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light nav-section">
           <Link className="navbar-brand" to="/" id="brand">Blue-FI</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

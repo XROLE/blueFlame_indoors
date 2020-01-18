@@ -1,16 +1,40 @@
 @import '../../sass/variables.scss';
 
 .search-bar {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
+  position: fixed;
+  top: 6%;
+  z-index: 2000;
+  width: 100%;
+  bottom: 2%;
+  text-align: center;
   margin: 0 auto;
+  background-color: #ecedec;
+  height: 10%;
+
+
+  .control-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
 
   &-logo-container {
-    max-width: 8%;
+    width: 18%;
     border-color: $primary;
     .logo {
       width: 100%;
+    }
+
+    .image-container {
+      width: 40%;
+    }
+
+    .image-container-2 {
+      width: 55%;
+      overflow: hidden;
+      margin-top: 25%;
+      margin-left: 15%;
     }
   }
 

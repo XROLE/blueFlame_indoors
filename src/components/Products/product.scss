@@ -2,9 +2,14 @@
 
 .product-container {
   margin: 0 auto;
-  .card-container { height: 200px;}
+  .card-container {
+    height: 200px;
+    margin-top: 4%;
+  };
+
   .card {
     height: 100%;
+    width: 15rem;
   }
 
 
@@ -24,6 +29,23 @@
     .cart-link {
       color: $primary;
       cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: $sm) {
+  .product-container {
+
+    .card {
+      width: 10rem;
+
+      p {
+        font-size: $lower-primary;
+      }
+    }
+
+    .cart-section {
+      padding: 0;
     }
   }
 }

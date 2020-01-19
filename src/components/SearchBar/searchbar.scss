@@ -79,51 +79,53 @@
   }
 }
 
-// IPAD SCREENS
-@media only screen and (max-width: 768px) and (min-width: 415px) {
+@media(max-width: $sm) {
   .search-bar {
+    width: 100%;
+    top: 7.3%;
+    height: 11%;
+
     &-logo-container {
-      margin-top: 10px;
+      .image-container {
+        display: none;
+      }
+    }
+    .control-container {
+      display: block;
+      width: 100%;
+    }
+
+    &-form {
+      display: flex;
+      width: 95%;
+      margin: 2% auto 0 auto;
+
+      &-input-container {
+        width: 96%;
+      }
+
+      input {
+        padding: 5px;
+        font-size: $lower-primary;
+      }
+
+      button {
+        padding: 4px 7px;
+        font-size: $lower-primary;
+      }
     }
 
     &-nav {
-      width: 20%;
-      margin-top: 30px;
-
+      justify-content: space-around;
+      margin-top: 2%;
+      width: 100%;
       p {
-        font-size: 0.8rem;
+        font-size: $lower-primary;
+        &:hover {
+          cursor: pointer;
+          color: $primary;
+        }
       }
     }
   }
 }
-// SMALLER PHONE SCREEN
-@media only screen and (max-width: 415px) {
-  .search-bar {
-    width: 95%;
-
-    &-logo-container {
-      display: none;
-    }
-
-    &-form {
-      margin-top: 10px;
-
-      &-input-container {
-        width: 100%;
-
-        input {
-          padding: 5px;
-        }
-      }
-    }
-
-    &-nav {
-      margin-top: 15px;
-      width: 30%;
-
-      p {
-        font-size: 0.8rem;
-      }
-    }
-  }
-};

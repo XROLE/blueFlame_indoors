@@ -33,7 +33,15 @@
   }
 }
 
-@media only screen and (max-width: $sm) {
+@media(max-width: $xLg) {
+  .product-container {
+    .card-container{
+      margin-top: 0%;
+    }
+  }
+}
+
+@media(max-width: $sm) {
   .product-container {
 
     .card {

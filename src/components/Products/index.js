@@ -5,10 +5,10 @@ import './product.scss';
 export default class Products extends Component {
   render(){
     return(
-      <div className="row mt-4 product-container">
+      <div className="row product-container">
         {productsData.map(product => (
-          <div className="col-4 mt-5 card-container" key={productsData.id} >
-            <div className="card" style={{width: "15rem" }}>
+          <div className="col-6 col-md-6 col-lg-4 card-container" key={productsData.id} >
+            <div className="card">
               <div className="card-body ">
                 <div className="image-container" style={{backgroundImage: "url(" + (product.imageUrl) + ")"}}></div>
                 <div className="cart-section mt-2">

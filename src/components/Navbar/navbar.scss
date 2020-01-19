@@ -49,3 +49,13 @@
     }
   }
 }
+
+@media only screen and (max-width: $sm) {
+  .navbar-container {
+    width: 100%;
+
+    .nav-section {
+      width: 100%;
+    }
+  }
+};

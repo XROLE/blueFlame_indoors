@@ -1,0 +1,132 @@
+@import '../../sass/variables.scss';
+.item-wrapper {
+  color: $text-color;
+  margin-top: 10%;
+
+  .bold {
+    font-weight: bolder;
+  }
+
+  .image-container {
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    margin-top: 7%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .item-row {
+    padding-bottom: 5%;
+    border-bottom: 1px solid #EFE7E7;
+    line-height: 30px;
+
+    .info-container {
+      margin-top: 7%;
+    }
+
+    .table-container {
+      border-top: 1px solid #EFE7E7;
+      border-bottom: 1px solid #EFE7E7;
+      padding: 4% 0;
+      margin-top: 5%;
+    }
+
+    table {
+      width: 100%;
+      text-align: left;
+      line-height: 35px;
+    }
+
+    .button-container {
+      display: flex;
+      margin-top: 10%;
+
+      .add-to-cart {
+        background-color: $primary;
+        color: white;
+        padding: 10px 30px;
+        margin-right: 20%;
+        cursor: pointer;
+      }
+
+      .checkout {
+        color: black;
+        padding: 10px 34px;
+        border: 1px solid $primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .more-products-row {
+
+    margin-top: 2%;
+
+    .product-container {
+      height: 150px;
+      width: 80px;
+      overflow: hidden;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media(max-width: $lg) {
+  .item-wrapper{
+    .item-row {
+      .button-container {
+        font-size: $sub-primary;
+        .add-to-cart {
+          padding: 2px 15px;
+          margin-right: 20%;
+        }
+
+        .checkout {
+          color: black;
+          padding: 2px 15px;
+          border: 1px solid $primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}
+
+@media(max-width: $sm) {
+  .item-wrapper {
+
+    .image-container {
+      height: 200px;
+      width: 200px;
+      margin: 30% auto 0 auto;
+    }
+
+    .item-row {
+      .button-container {
+        font-size: $sub-primary;
+        .add-to-cart {
+          padding: 2px 15px;
+          margin-right: 20%;
+        }
+
+        .checkout {
+          color: black;
+          padding: 2px 15px;
+          border: 1px solid $primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

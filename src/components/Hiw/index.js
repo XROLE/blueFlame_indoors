@@ -83,5 +83,5 @@ export default function Hiw (){
         <button>Send Mail</button>
       </div>
     </div>
-  </div>)
+  </div>);
 }

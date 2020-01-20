@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './slide.scss';
 
 export default class Slides extends Component {
@@ -6,7 +7,7 @@ export default class Slides extends Component {
     return (
       <Fragment>
         <div className="bd-example container">
-          <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+          <Link to='/item' id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -43,7 +44,7 @@ export default class Slides extends Component {
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="sr-only">Next</span>
             </a>
-          </div>
+          </Link>
         </div>
       </Fragment>
     )

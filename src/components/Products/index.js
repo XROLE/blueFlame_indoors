@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { productsData } from './productsData';
 import './product.scss';
 
@@ -8,7 +9,7 @@ export default class Products extends Component {
       <div className="row product-container">
         {productsData.map(product => (
           <div className="col-6 col-md-6 col-lg-4 card-container" key={productsData.id} >
-            <div className="card">
+            <Link to='/item' className="card">
               <div className="card-body ">
                 <div className="image-container" style={{backgroundImage: "url(" + (product.imageUrl) + ")"}}></div>
                 <div className="cart-section mt-2">
@@ -16,7 +17,7 @@ export default class Products extends Component {
                   <p className="cart-link">+ To Cart</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))};
       </div>

@@ -11,6 +11,7 @@ import LandingPageContainer from './containers/LandingPageContainer';
 import AboutContainer from './containers/AboutContainer';
 import TestimonyContainer from './containers/TestimonyContainer';
 import HiwContainer from './containers/HiwContainer';
+import Item from './components/Item';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 
 toast.configure();
@@ -45,6 +46,7 @@ ReactDOM.render(
      <Route path="/about" component={AboutContainer} />
      <Route path="/testimonies" component={TestimonyContainer} />
      <Route path="/howitworks" component={HiwContainer} />
+     <Route path="/item" component={Item} />
     </Router>
   </Provider>,
    document.getElementById('App')

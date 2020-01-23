@@ -51,7 +51,7 @@ export class SearchBar extends Component {
             }
             <p> Icon</p>
           </div>
-          <Auth />
+          {/* <Auth /> */}
         </div>
       </div>
     );

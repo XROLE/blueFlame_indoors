@@ -9,7 +9,7 @@ const defaultState = {
   inProgress: false,
   user: '',
   error: ''
-}
+};
 
 export default (state = defaultState, action) => {
   switch (action.type) {
@@ -17,7 +17,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         inProgress: true,
-      }
+      };
     }
     case SIGNUP_SUCCESS: {
       return {
@@ -25,16 +25,16 @@ export default (state = defaultState, action) => {
         inProgress: false,
         error: '',
         user: action.user
-      }
+      };
     }
     case SIGNUP_FAILURE: {
       return {
         ...state,
         inProgress: false,
         error: action.error
-      }
+      };
     }
     default:
       return state;
   }
-}
+};

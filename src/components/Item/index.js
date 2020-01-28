@@ -5,6 +5,9 @@ import Searchar from '../SearchBar';
 import './item.scss';
 
 export default class Item extends React.Component {
+  componentDidMount () {
+    const item = this.props.location.state;
+  }
   render () {
     return (
       <Fragment>
@@ -14,26 +17,26 @@ export default class Item extends React.Component {
           <div className="row item-row">
             <div className="col-12 col-md-6 col-lg-6">
               <div className="image-container">
-                <img src="https://5.imimg.com/data5/MF/SG/MY-29403875/roller-blind-curtain-500x500.jpg" />
+                <img src={this.props.location.state.image} />
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-6">
               <div className="info-container">
-                <h3>Bail Design</h3>
+                <h3>{this.props.location.state.name}</h3>
                 <div>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+                  <p>{this.props.location.state.description}</p>
                 </div>
                 <div className='table-container'>
                   <table >
                     <tbody>
                       <tr>
                         <td className='bold'>Quantity:</td>
-                        <td>50 Yards</td>
+                        <td>{this.props.location.state.quantity}</td>
                         <td></td>
                       </tr>
                       <tr>
                         <td className='bold'>Price:</td>
-                        <td># 94,000</td>
+                          <td># {this.props.location.state.price}</td>
                         <td></td>
                       </tr>
                       <tr>

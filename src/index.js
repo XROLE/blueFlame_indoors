@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import store from './store';
 import Navbar from './components/Navbar';
@@ -32,7 +32,7 @@ export class App extends Component {
       <Fragment>
         <Navbar />
         <SearchBar />
-        <LandingPageContainer />
+        <LandingPageContainer history = { this.props.history }/>
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
     );
@@ -42,11 +42,13 @@ export class App extends Component {
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-     <Route path="/" exact component={App} />
-     <Route path="/about" component={AboutContainer} />
-     <Route path="/testimonies" component={TestimonyContainer} />
-     <Route path="/howitworks" component={HiwContainer} />
-     <Route path="/item" component={Item} />
+      <Switch>
+        <Route path="/" exact render={ (props) => <App { ...props } />} />
+        <Route path="/about" render={ () => <AboutContainer />} />
+        <Route path="/testimonies" render = { () => <TestimonyContainer />} />
+        <Route path="/howitworks" render = { () => <HiwContainer />} />
+        <Route path="/item" render={ (props) => <Item { ...props } />} />
+     </Switch>
     </Router>
   </Provider>,
    document.getElementById('App')

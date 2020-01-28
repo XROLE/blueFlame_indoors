@@ -7,7 +7,7 @@ export default class Slides extends Component {
     return (
       <Fragment>
         <div className="bd-example container">
-          <Link to='/item' id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+          <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -44,7 +44,7 @@ export default class Slides extends Component {
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="sr-only">Next</span>
             </a>
-          </Link>
+          </div>
         </div>
       </Fragment>
     )

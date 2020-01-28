@@ -18,7 +18,7 @@ export default class LandingPageContainer extends Component {
           </div>
           <div className="col-12 col-md-12 col-lg-10 landing-page-container-main-content" >
             <Slides />
-           <Products />
+           <Products history={this.props.history}/>
           </div>
         </div>
       </div>

@@ -1,6 +1,14 @@
 @import '../../sass/variables.scss';
 
+.Toastify {
+  .Toastify__toast--default {
+    background-color: #f05e23;
+    border-radius: 5px;
+  }
+}
+
 .hiw-container {
+  .center-align { text-align: center;}
   margin-top: 10%;
   &-title {
     text-align: center;
@@ -69,6 +77,54 @@
       margin-top: 10px;
       font-size: $lower-primary;
       background-color: $primary;
+    }
+  }
+}
+
+@media (max-width: $xxLg) {
+  .hiw-container {
+    margin-top: 17% ;
+
+    table {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .hiw-container {
+    margin-top: 22%;
+
+    .estimate-button {
+      margin-top: 37px;
+    }
+
+    table {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .hiw-container {
+    margin-top: 27%;
+
+    .hiw-container-result {
+      margin:7% 0;
+    }
+
+    table {
+      width: 85%;
+    }
+
+    .button-container {
+      width: 85%;
+      text-align: center;
+
+      button {
+        margin: 8% 0 3% 0;
+        padding: 5px 30px;
+      }
     }
   }
 }

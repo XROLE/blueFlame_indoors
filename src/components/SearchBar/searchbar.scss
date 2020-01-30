@@ -80,7 +80,8 @@
 
 @media(max-width: $xLg) {
   .search-bar {
-    top: 10%;
+    top: 4.5%;
+    height: 6%;
   };
 }
 
@@ -123,8 +124,12 @@
 
 @media(max-width: $md) {
   .search-bar {
-    top: 12.5%;
-    height: 14%;
+    top: 5.5%;
+    height: 6%;
+
+    .search-bar-nav {
+      width: 100%;
+    }
   }
 }
 

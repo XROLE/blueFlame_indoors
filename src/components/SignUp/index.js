@@ -13,7 +13,7 @@ export class SignUp extends Component {
       userName: "",
       password: "",
       confirmPassword: "",
-    }
+    };
   }
 componentDidUpdate() {
   {
@@ -29,14 +29,14 @@ componentDidUpdate() {
           color: 'white'
         })
       }
-    )
+    );
   }
 }
 
   handleChange (e) {
     return this.setState({
       [e.target.name] : e.target.value.trim()
-    })
+    });
   }
 
   handleSubmit (e) {
@@ -74,7 +74,7 @@ componentDidUpdate() {
           { this.props.inProgress && <Spinner />}
         </div>
       </form>
-    )
+    );
   }
 }
 
@@ -82,12 +82,12 @@ const mapStateToProps = (state) => ({
   inProgress: state.signUp.inProgress,
   error: state.signUp.error,
   successMessage: state.signUp.user.Message
-})
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
     signUp: user => dispatch(signUpAction(user)),
-  }
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

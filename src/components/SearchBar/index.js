@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Auth from '../../components/Authentication';
 import { connect } from 'react-redux';
 import './searchbar.scss';
@@ -49,7 +52,7 @@ export class SearchBar extends Component {
                 </p>
 
             }
-            <p> Icon</p>
+            <p> <FontAwesomeIcon icon={faShoppingCart} /> <span className="cart-quantity">0</span></p>
           </div>
           {/* <Auth /> */}
         </div>

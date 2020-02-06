@@ -8,7 +8,7 @@ export default class HiwContainer extends Component {
     return(
     <Fragment>
       <Navbar />
-      <SearchBar />
+      <SearchBar history={this.props.history}/>
       <Hiw />
     </Fragment>);
   }

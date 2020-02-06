@@ -14,7 +14,7 @@ export class Item extends React.Component {
     return (
       <Fragment>
         <Navbar />
-        <Searchar />
+        <Searchar history={this.props.history}/>
         <div className="container item-wrapper">
           <div className="row item-row">
             <div className="col-12 col-md-6 col-lg-6">

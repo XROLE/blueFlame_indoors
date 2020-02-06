@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Auth from '../../components/Authentication';
@@ -44,7 +43,7 @@ export class SearchBar extends Component {
             </div>
           </form>
           <div className="search-bar-nav">
-            <p> Help </p>
+            <p onClick={() => this.props.history.push('/help')}> Help </p>
             {
               !localStorage.getItem('BFT-token') ?
                 <p

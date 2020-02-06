@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import {
-  toastError
-} from '../../utils/Toast/errorToast';
+  toastMessage
+} from '../../utils/Toast/showMessage';
 import {
   calYardsOfCurtain,
   calNoOfRings,
@@ -40,10 +40,10 @@ export default class Hiw extends React.Component {
     const { highLenghtTape, normalTape, windows, doors } = this.state;
     if(!windows && !doors ) {
       const errorMessage = 'Windows or Doors can not be empty';
-     return toastError(errorMessage);
+     return toastMessage(errorMessage, 'failure');
     }else if (!highLenghtTape && !normalTape) {
       const errorMessage = 'No style selected';
-      return toastError(errorMessage);
+      return toastMessage(errorMessage, 'failure');
     }else {
       return this.state.showResult ? this.setState({ showResult: false }) : this.setState({ showResult: true});
     }

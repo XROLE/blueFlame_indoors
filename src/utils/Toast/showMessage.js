@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import {css} from 'glamor';
 
-export const toastError = (errorMessage) => {
+export const toastMessage = (errorMessage, status, autoCloseTime) => {
   return toast(
     errorMessage,
       {
@@ -10,7 +10,8 @@ export const toastError = (errorMessage) => {
             borderRadius: '5px',
             color: 'white'
         }),
-        position: toast.POSITION.TOP_RIGHT,
+        autoClose: autoCloseTime,
+        position: `${ (status=='success') ? toast.POSITION.TOP_CENTER : toast.POSITION.TOP_RIGHT }`,
       },
   );
 };

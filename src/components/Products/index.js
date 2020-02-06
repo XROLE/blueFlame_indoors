@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getAllProducts } from '../../actions';
+import { addToCart } from '../../utils/Toast/cart';
 import './product.scss';
 
 export class Products extends Component {
@@ -14,12 +14,12 @@ export class Products extends Component {
       <div className="row product-container">
         {this.props.products.products.map(product => (
           <div className="col-6 col-md-6 col-lg-4 mt-4 card-container" key={product.id}>
-            <div className="card" onClick={() => this.props.history.push('/item', product)}>
+            <div className="card">
               <div className="card-body ">
-                <div className="image-container" style={{backgroundImage: "url(" + (product.image) + ")"}}></div>
+                <div className="image-container" style={{backgroundImage: "url(" + (product.image) + ")"}} onClick={() => this.props.history.push('/item', product)}></div>
                 <div className="cart-section mt-2">
                   <p> #{product.price}</p>
-                  <p className="cart-link">+ To Cart</p>
+                  <p className="cart-link" onClick={() => addToCart(product)}>+ To Cart</p>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => {
   return {
-    getAllProducts: () => dispatch(getAllProducts())
+    getAllProducts: () => dispatch(getAllProducts()),
   };
 };
 

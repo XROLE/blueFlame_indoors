@@ -5,7 +5,8 @@ import {
   SIGNUP_FAILURE,
   GET_ALL_PRODUCTS_IN_PROGRESS,
   GET_ALL_PRODUCTS_SUCCESS,
-  GET_ALL_PRODUCTS_FAILURE ,
+  GET_ALL_PRODUCTS_FAILURE,
+  GET_CART_COUNT,
 } from '../actions/actionType';
 
 const header = {
@@ -27,7 +28,7 @@ export const signUpAction = (userData) => (dispatch) => {
     return dispatch({
       type: SIGNUP_SUCCESS,
       user: data.data
-    })
+    });
   })
   .catch(error => {
     return dispatch({
@@ -52,4 +53,19 @@ export const getAllProducts = () => (dispatch) => {
       });
     });
   });
+};
+
+export const getCartCount = () => (dispatch) => {
+  if(JSON.parse(localStorage.getItem('cart')) == null){
+    return dispatch({
+      type: GET_CART_COUNT,
+      cartCount: 0
+    });
+  }else {
+    return dispatch({
+      type: GET_CART_COUNT,
+      cartCount: JSON.parse(localStorage.getItem('cart')).length
+    });
+
+  }
 };

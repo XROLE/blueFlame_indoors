@@ -12,6 +12,7 @@ import AboutContainer from './containers/AboutContainer';
 import TestimonyContainer from './containers/TestimonyContainer';
 import HiwContainer from './containers/HiwContainer';
 import Item from './components/Item';
+import Help from './components/Help';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 
 toast.configure();
@@ -31,7 +32,7 @@ export class App extends Component {
     return (
       <Fragment>
         <Navbar />
-        <SearchBar />
+        <SearchBar history={this.props.history}/>
         <LandingPageContainer history = { this.props.history }/>
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
@@ -44,10 +45,11 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route path="/" exact render={ (props) => <App { ...props } />} />
-        <Route path="/about" render={ () => <AboutContainer />} />
-        <Route path="/testimonies" render = { () => <TestimonyContainer />} />
-        <Route path="/howitworks" render = { () => <HiwContainer />} />
+        <Route path="/about" render={ (props) => <AboutContainer { ...props }/>} />
+        <Route path="/testimonies" render = { (props) => <TestimonyContainer { ...props } />} />
+        <Route path="/howitworks" render = { (props) => <HiwContainer { ...props } />} />
         <Route path="/item" render={ (props) => <Item { ...props } />} />
+        <Route path="/help" render={ (props) => <Help { ...props } />} />
      </Switch>
     </Router>
   </Provider>,

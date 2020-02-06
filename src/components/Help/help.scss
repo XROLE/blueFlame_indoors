@@ -1,0 +1,24 @@
+@import '../../sass/variables.scss';
+
+.help-container {
+  margin: 7% auto 0 auto;
+  text-align: center;
+  width: 95%;
+
+  &-info {
+    text-align: justify;
+  }
+}
+
+@media(max-width: $xLg) {
+  .help-container {
+    margin-top: 12%;
+  }
+}
+
+@media(max-width: $sm) {
+  .help-container {
+    margin-top: 20%;
+    width: 100%;
+  }
+}

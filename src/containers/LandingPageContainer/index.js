@@ -13,10 +13,7 @@ export default class LandingPageContainer extends Component {
     return (
       <div className="landing-page-container">
         <div className="row">
-          <div className="col-12 col-md-12 col-lg-2  landing-page-container-side-bar">
-            <SideBar />
-          </div>
-          <div className="col-12 col-md-12 col-lg-10 landing-page-container-main-content" >
+          <div className="landing-page-container-main-content" >
             <Slides />
            <Products history={this.props.history}/>
           </div>

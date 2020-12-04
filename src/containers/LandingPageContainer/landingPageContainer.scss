@@ -1,7 +1,6 @@
 @import '../../sass/variables.scss';
 
 .landing-page-container {
-  width: 80%;
   margin : 10% auto 0 auto;
 
   &-side-bar {
@@ -9,9 +8,7 @@
   }
 
   &-main-content {
-    margin-left: 16%;
-    margin-top: 1%;
-
+margin: 0 auto;;
   }
 }
 @media(max-width: $xLg) {

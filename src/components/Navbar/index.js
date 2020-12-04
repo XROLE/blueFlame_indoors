@@ -27,7 +27,7 @@ export class Navbar extends Component {
                 <Link className="nav-link highlight-on-hover" to="howitworks">How it works</Link>
               </li>
             </ul>
-            <p className="highlight-on-hover link disable order"> Place Order</p>
+            <p className="highlight-on-hover link disable order"> Order</p>
           </div>
         </nav>
       </div>

@@ -2,14 +2,14 @@
 
 .search-bar {
   position: fixed;
-  top: 6%;
+  top: 55px;
   z-index: 900;
   width: 100%;
   bottom: 2%;
   text-align: center;
   margin: 0 auto;
   background-color: #ecedec;
-  height: 10%;
+  height: 65px;
 
   .control-container {
     display: flex;
@@ -40,7 +40,7 @@
   &-form {
     display: flex;
     width: 65%;
-    margin-top: 25px;
+    margin: auto 0;
 
     &-input-container {
       width: 80%;
@@ -82,18 +82,8 @@
   }
 }
 
-@media(max-width: $xLg) {
-  .search-bar {
-    top: 4.5%;
-    height: 6%;
-  };
-}
-
 @media(max-width: $lg) {
   .search-bar {
-    top: 12%;
-    height: 15%;
-
     &-form {
       display: flex;
       width: 95%;
@@ -112,7 +102,7 @@
 
     &-nav {
       justify-content: space-around;
-      margin-top: 3%;
+      margin-top: 4%;
       width: 35%;
       p {
         font-size: $lower-primary;
@@ -128,11 +118,16 @@
 
 @media(max-width: $md) {
   .search-bar {
-    top: 5.5%;
-    height: 6%;
-
     .search-bar-nav {
       width: 100%;
+    }
+
+    &-logo-container {
+  
+      .image-container {
+        margin-top:15px;
+        width: 100%;
+      }
     }
   }
 }
@@ -140,8 +135,7 @@
 @media(max-width: $sm) {
   .search-bar {
     width: 100%;
-    top: 7.3%;
-    height: 11%;
+    height: 100px;
 
     &-logo-container {
       .image-container {
@@ -156,21 +150,28 @@
     &-form {
       display: flex;
       width: 95%;
-      margin: 2% auto 0 auto;
+      margin: 20px auto 0 auto;
 
       &-input-container {
         width: 96%;
       }
 
       input {
-        padding: 5px;
+        padding: 8px;
         font-size: $lower-primary;
       }
 
       button {
-        padding: 4px 7px;
+        padding: 7px 7px;
         font-size: $lower-primary;
       }
     }
   }
 }
+
+@media(max-width: $xSm) {
+  .search-bar {
+    top: 9%;
+  }
+}
+

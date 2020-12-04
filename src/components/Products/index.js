@@ -13,7 +13,7 @@ export class Products extends Component {
     return(
       <div className="row product-container">
         {this.props.products.products.map(product => (
-          <div className="col-6 col-md-6 col-lg-4 mt-4 card-container" key={product.id}>
+          <div className="col-6 col-md-4 col-lg-4 mt-4 card-container" key={product.id}>
             <div className="card">
               <div className="card-body ">
                 <div className="image-container" style={{backgroundImage: "url(" + (product.image) + ")"}} onClick={() => this.props.history.push('/item', product)}></div>

@@ -26,7 +26,6 @@ export class SearchBar extends Component {
   }
 
   render () {
-    console.log('I am a chosen one ', window.screen.width);
     return (
       <div className="search-bar">
         <div className="control-container">

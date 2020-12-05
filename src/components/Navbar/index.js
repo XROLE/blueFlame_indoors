@@ -18,16 +18,16 @@ export class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item disable">
-                <Link className="nav-link highlight-on-hover" to="/about">About <span className="sr-only">(current)</span></Link>
+                <Link className="nav-link highlight-on-hover" to="howitworks">How it works</Link>
+              </li>
+              <li className="nav-item disable">
+            <p className="highlight-on-hover link disable order"> Order</p>
               </li>
               <li className="nav-item disable">
                 <Link className="nav-link highlight-on-hover" to="/testimonies">Testimonies</Link>
               </li>
-              <li className="nav-item disable">
-                <Link className="nav-link highlight-on-hover" to="howitworks">How it works</Link>
-              </li>
             </ul>
-            <p className="highlight-on-hover link disable order"> Order</p>
+                <Link className="nav-link highlight-on-hover" to="/about">About <span className="sr-only">(current)</span></Link>
           </div>
         </nav>
       </div>

@@ -5,12 +5,13 @@
   width: 80%;
   .card-container {
     height: 200px;
-    margin-top: 4%;
+    margin-top: 30px;
   };
 
   .card {
     height: 100%;
-    width: 15rem;
+    width: 200px;
+
   }
 
 
@@ -36,11 +37,16 @@
 
 @media(max-width: $xLg) {
   .product-container {
+    width: 100%;
+
     .card-container{
-      margin-top: 0%;
 
       .card {
-        width: 180px;
+        width: 170px;
+
+        .lower-font {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -50,7 +56,7 @@
   .product-container {
 
     .card {
-      width: 10rem;
+      width: 100px;
 
       p {
         font-size: $lower-primary;
@@ -64,11 +70,13 @@
 }
 
 @media (max-width: $xSm) {
+  .product-container
   .card-container {
     height: 150px;
 
     .card {
-      width: 9rem
+      width: 135px;
     }
   };
 }
+

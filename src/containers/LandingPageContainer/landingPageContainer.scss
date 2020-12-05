@@ -1,40 +1,28 @@
 @import '../../sass/variables.scss';
 
 .landing-page-container {
-  margin : 10% auto 0 auto;
+  margin : 120px auto 0 auto;
 
   &-side-bar {
     position: fixed;
   }
 
   &-main-content {
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     width: 100%;
-  }
-}
-@media(max-width: $xLg) {
-  .landing-page-container {
-    margin-top: 17%;
-  }
-}
-
-@media(max-width: $lg) {
-  .landing-page-container {
-    margin-top: 15%;
   }
 }
 
 @media (max-width: $md) {
   .landing-page-container {
     width: 82%;
-    margin-top: 18%;
 
     &-side-bar {
       display: none;
     }
 
     &-main-content {
-      margin: 1% auto 0 auto;
+      margin: 20px auto 0 auto;
     }
   }
 }
@@ -42,6 +30,9 @@
 @media only screen and (max-width: $sm) {
   .landing-page-container {
     width: 93%;
-    margin-top: 40%;
+
+    &-main-content {
+      margin: 40px auto 0 auto;
+    }
   }
 }

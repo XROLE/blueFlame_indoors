@@ -1,0 +1,143 @@
+@import '../../sass/variables.scss';
+
+.order-page-wrapper {
+    margin: 140px auto 20px auto;
+    background-color: #F9F9F9;
+    width: 80%;
+    min-height: 70vh;
+    padding-bottom: 20px;
+
+    .hover {
+        cursor: pointer;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .medium-font-size {
+        font-size: 20px;
+    }
+
+    .header-container {
+        padding: 20px;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .cart-image-container {
+        text-align: center;
+        margin: auto 0;
+
+
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: bold;
+            color: $text-color;
+        }
+    }
+
+    .cart-item {
+        width: 90%;
+        margin: 0 auto 20px auto;
+
+        &-image-container {
+            height: 120px;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        &-card {
+            font-weight: bold;
+        }
+
+        img {
+            height: 100%;
+        }
+
+        &-price-container,
+        &-delete-container {
+            margin: auto;
+            text-align: center;
+
+            .close-button {
+                color: $text-color;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .quantity-control-container {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+    }
+
+    .title-container {
+        margin: auto 0;
+
+    }
+
+    .price-total-container {
+        display: flex;
+        justify-content: space-around;
+
+        p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+
+    .checkout-section {
+        margin: 0 auto;
+
+        &-button {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 5px;
+            padding: 8px;
+        }
+
+        p {
+            margin:auto 0;
+        }
+
+    }
+    
+    .keep-shopping {
+        background-color: white;
+        
+        a {
+            color: black;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    .checkout {
+        color: white;
+        background-color: $primary;
+    }
+
+    .category-holder {
+        color: $text-color;
+        font-size: 10px;
+        margin: -18px auto 0 auto;
+    }
+
+}

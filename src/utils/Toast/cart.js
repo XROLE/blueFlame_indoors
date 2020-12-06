@@ -31,3 +31,49 @@ export const clearCart = () => {
   window.location.reload();
   return store.dispatch(getCartCount());
 };
+
+export const getCartItems = () => {
+  try { 
+    return Object.values(JSON.parse(localStorage.getItem('cart')));
+  } catch (e) {
+    return [];
+  }
+}
+
+export const deleteItem = (id) => {
+  let itemIndex = -2;
+  const cartItems = Object.values(JSON.parse(localStorage.getItem('cart')));
+
+  for(let i = 0; i < cartItems.length; i++) {
+    if(cartItems[i].id == id){
+      itemIndex = i;
+    }
+  }
+  cartItems.splice(itemIndex, 1);
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+  return cartItems;
+}
+
+export const incrementItem = (id) => {
+  const cartItems = Object.values(JSON.parse(localStorage.getItem('cart')));
+
+  for(let i = 0; i < cartItems.length; i++) {
+    if(cartItems[i].id == id){
+      cartItems[i].volume++;
+    }
+  }
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+  return cartItems;
+};
+
+export const decrementItem = (id) => {
+  const cartItems = Object.values(JSON.parse(localStorage.getItem('cart')));
+
+  for(let i = 0; i < cartItems.length; i++) {
+    if(cartItems[i].id == id && cartItems[i].volume > 1){
+      cartItems[i].volume--;
+    }
+  }
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+  return cartItems;
+}

@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
 import AppSpinnerContainer from './components/AppSpinnerContainer';
 import LandingPageContainer from './containers/LandingPageContainer';
+import Order from './containers/OrderContainer';
 import AboutContainer from './containers/AboutContainer';
 import TestimonyContainer from './containers/TestimonyContainer';
 import HiwContainer from './containers/HiwContainer';
@@ -50,6 +51,7 @@ ReactDOM.render(
         <Route path="/howitworks" render = { (props) => <HiwContainer { ...props } />} />
         <Route path="/item" render={ (props) => <Item { ...props } />} />
         <Route path="/help" render={ (props) => <Help { ...props } />} />
+        <Route path="/cart" render={ (props) => <Order { ...props } />} />
      </Switch>
     </Router>
   </Provider>,

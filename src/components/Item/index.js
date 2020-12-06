@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Searchar from '../SearchBar';
-import {  clearCart, addToCart } from '../../utils/Toast/cart';
+import { addToCart } from '../../utils/Toast/cart';
 import { connect } from 'react-redux';
 
 import './item.scss';
@@ -51,7 +52,7 @@ export class Item extends React.Component {
                 </div>
                 <div className="button-container">
                   <p className="add-to-cart" onClick={() => addToCart(this.props.location.state)}>Add To Cart</p>
-                  <p className='checkout' onClick={() => clearCart()}>Checkout</p>
+                  <Link to="/cart"><p className='checkout'>Checkout</p></Link>
                 </div>
               </div>
             </div>

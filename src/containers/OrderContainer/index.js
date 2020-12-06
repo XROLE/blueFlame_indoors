@@ -21,6 +21,7 @@ export default class Order extends Component {
          }, 
      );
     }
+    
 
     increment(id){
         incrementItem(id);

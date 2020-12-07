@@ -4,6 +4,10 @@
   background-color: $base;
   font-size: $primary-size;
 
+  .nav-link {
+    color: $text-color;
+  }
+
   .nav-section {
     width: 80%;
     margin: 0 auto;

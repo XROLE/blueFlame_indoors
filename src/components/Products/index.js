@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getAllProducts } from '../../actions';
 import { addToCart } from '../../utils/Toast/cart';
+import Spinner from '../Spinner';
 import './product.scss';
 
 export class Products extends Component {
@@ -11,7 +12,9 @@ export class Products extends Component {
 
   render(){
     return(
-      <div className="row product-container">
+      this.props.gettingProduct 
+      ? <div className="loader-container"><Spinner /> </div>
+      : <div className="row product-container">
         {this.props.products.products.map(product => {
           return (
           <div className="col-6 col-md-4 col-lg-3 card-container" key={product.id}>
@@ -36,6 +39,7 @@ export class Products extends Component {
 
 const mapStateToProps = (state) => ({
   products: state.products,
+  gettingProduct: state.products.getProductInProgress,
 });
 const mapDispatchToProps = (dispatch) => {
   return {

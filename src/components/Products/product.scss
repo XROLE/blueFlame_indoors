@@ -22,6 +22,8 @@
     cursor: pointer;
   }
 
+ 
+
   .cart-section {
     font-weight: bolder;
     display: flex;
@@ -80,3 +82,8 @@
   };
 }
 
+// This is for the loader. Loader is not in the product this
+.loader-container {
+  margin: 20vh auto 0 auto;
+  text-align: center;
+}

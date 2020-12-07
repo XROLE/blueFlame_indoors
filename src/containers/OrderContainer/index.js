@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/navbar';
+import Navbar from '../../components/Navbar';
 import SearchBar from '../../components/SearchBar';
 import { getCartItems, deleteItem, incrementItem, decrementItem } from '../../utils/toast/cart';
 import './orderContainer.scss';

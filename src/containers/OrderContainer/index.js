@@ -21,7 +21,7 @@ export default class Order extends Component {
          }, 
      );
     }
-    
+
 
     increment(id){
         incrementItem(id);
@@ -76,7 +76,7 @@ export default class Order extends Component {
                                                     <div className="col-6 cart-item-image-container">
                                                         <img src={item['image']} />
                                                     </div>
-                                                    <div className="col-6 title-container jack">
+                                                    <div className="col-6 title-container">
                                                         <p> {item['name']}</p>
                                                         <p className="category-holder"> {item['category']} </p>
                                                     </div>
@@ -108,12 +108,12 @@ export default class Order extends Component {
                             <div></div> :
                             <div className="row checkout-section">
                                 <div className="col-3 checkout-section-button keep-shopping">
-                                   <Link to="/"> <p> keep shopping </p></Link>
+                                   <Link to="/"> <p> shop more </p></Link>
                                 </div>
                                 <div className="col-3 checkout-section-button checkout">
                                     <p> Pay </p>
                                 </div>
-                                <div className=" col-4 price-total-container">
+                                <div className="col-4 price-total-container">
                                     <p> Total: </p>
                                     <p># {
                                         this.state.cart.map(e => e['price'] *  e['volume']).reduce((a, b) => a + b)

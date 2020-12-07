@@ -7,6 +7,11 @@
     min-height: 70vh;
     padding-bottom: 20px;
 
+    .col-1 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
     .hover {
         cursor: pointer;
     }
@@ -51,7 +56,7 @@
 
         &-image-container {
             height: 120px;
-            
+
             img {
                 width: 100%;
             }
@@ -113,22 +118,23 @@
         }
 
         p {
-            margin:auto 0;
+            margin: auto 0;
         }
 
     }
-    
+
     .keep-shopping {
         background-color: white;
-        
+
         a {
             color: black;
+
             &:hover {
                 text-decoration: none;
             }
         }
     }
-    
+
     .checkout {
         color: white;
         background-color: $primary;
@@ -140,4 +146,89 @@
         margin: -18px auto 0 auto;
     }
 
+}
+
+@media(max-width: $sm) {
+    .order-page-wrapper {
+        width: 100%;
+        min-height: 100vh;
+
+        .col-6,
+        .col-4 {
+            padding-right: 0;
+        }
+
+        .header-container {
+            h1 {
+                padding-top: 10px;
+                font-size: 20px;
+            }
+        }
+
+        .cart-item {
+            width: 96%;
+            height: 80px;
+
+            &-image-container {
+                height: 80px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .quantity-control-container {
+                display: block;
+            }
+
+            &-price-container,
+            &-delete-container {
+                margin: auto;
+                text-align: left;
+
+                p {
+                    margin-bottom: 0;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .title-container {
+            margin: auto 0;
+
+            p {
+                font-size: 12px;
+            }
+
+            .category-holder {
+                font-size: 9px;
+            }
+        }
+
+        .keep-shopping,
+        .checkout {
+            font-size: 12px;
+        }
+
+        .price-total-container {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+@media(max-width: $sm) {
+    .order-page-wrapper {
+
+        .cart-item {
+            &-price-container,
+            &-delete-container {
+                p {
+                    font-size:11px;
+                }
+            }
+            }
+    }
 }

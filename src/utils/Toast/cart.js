@@ -27,7 +27,6 @@ export const addToCart = (item) => {
 
 export const clearCart = () => {
   localStorage.removeItem('cart');
-  toastMessage('Checkout not working yet', 'success', 2000);
   window.location.reload();
   return store.dispatch(getCartCount());
 };
@@ -51,7 +50,7 @@ export const deleteItem = (id) => {
   }
   cartItems.splice(itemIndex, 1);
   localStorage.setItem('cart', JSON.stringify(cartItems));
-  return cartItems;
+  return store.dispatch(getCartCount());;
 }
 
 export const incrementItem = (id) => {

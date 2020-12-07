@@ -11,6 +11,16 @@
   background-color: #ecedec;
   height: 65px;
 
+  .cart-icon-container {
+    a {
+      color: $text-color
+    }
+
+    a:hover{
+      text-decoration: none;
+    }
+  }
+
   .control-container {
     display: flex;
     justify-content: space-between;

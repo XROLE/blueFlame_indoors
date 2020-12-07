@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Auth from '../../components/Authentication';
 import { connect } from 'react-redux';
 import { getCartCount } from '../../actions';
-import { clearCart } from '../../utils/Toast/cart';
 import './searchbar.scss';
 
 export class SearchBar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      login:false
+      login: false
     };
   }
 
@@ -20,24 +20,24 @@ export class SearchBar extends Component {
     this.props.getCartCount();
   }
 
-  logout (){
+  logout() {
     localStorage.removeItem('BFT-token');
     return window.location.reload();
   }
 
-  render () {
+  render() {
     return (
       <div className="search-bar">
         <div className="control-container">
           <div className="search-bar-logo-container">
             <div className="image-container">
               <div className="image-container-2">
-               <img src="http://overstocklogo.com/image/cache/logos/blue_flame_logo_design-550x550.jpg" className = "logo"/>
+                <img src="http://overstocklogo.com/image/cache/logos/blue_flame_logo_design-550x550.jpg" className="logo" />
               </div>
             </div>
           </div>
           <form className="search-bar-form">
-            <div className="search-bar-form-input-container"><input type="text" placeholder="Search for products here"/></div>
+            <div className="search-bar-form-input-container"><input type="text" placeholder="Search for products here" /></div>
             <div>
               <button> Search </button>
             </div>
@@ -50,14 +50,14 @@ export class SearchBar extends Component {
                   data-toggle="modal"
                   data-target="#exampleModalCenter"
                 >
-                Login
+                  Login
                 </p> :
                 <p onClick={() => this.logout()}>
                   Logout
                 </p>
 
             }
-  <p onClick={() => clearCart()}> <FontAwesomeIcon icon={faShoppingCart} /> <span className="cart-quantity">{this.props.cartCount}</span></p>
+            <p className="cart-icon-container"><Link to="/cart" > <FontAwesomeIcon icon={faShoppingCart} /> <span className="cart-quantity">{this.props.cartCount}</span></Link></p>
           </div>
           {/* <Auth /> */}
         </div>

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import SearchBar from '../../components/SearchBar';
-import { getCartItems, deleteItem, incrementItem, decrementItem } from '../../utils/toast/Cart';
+import { getCartItems, deleteItem, incrementItem, decrementItem } from '../../utils/Toast/cart';
 import './orderContainer.scss';
 
 export default class Order extends Component {

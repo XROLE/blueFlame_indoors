@@ -4,7 +4,7 @@ import './navbar.scss';
 
 export class Navbar extends Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

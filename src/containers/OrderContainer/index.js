@@ -103,6 +103,7 @@ export default class Order extends Component {
                                 )
                             })
                     }
+                    
                     {
                         this.state.cart.length < 1 ?
                             <div></div> :

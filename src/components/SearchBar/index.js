@@ -5,7 +5,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Auth from '../../components/Authentication';
 import { connect } from 'react-redux';
 import { getCartCount } from '../../actions';
-import Modal from '../../components/Modal';
+import { decodeJwt } from '../../utils/Toast/decode-token';
 import './searchbar.scss';
 
 export class SearchBar extends Component {
@@ -55,7 +55,9 @@ export class SearchBar extends Component {
                   Login
                 </p> :
                 <>
-                  <p className="username" > Hi, Samuel </p>
+                  <p className="username" > Hi, {
+                    decodeJwt(localStorage.getItem('BFT-token')).userName
+                  } </p>
                   <p onClick={() => this.logout()}>
                     Logout
                 </p>

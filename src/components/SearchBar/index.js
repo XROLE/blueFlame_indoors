@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Auth from '../../components/Authentication';
 import { connect } from 'react-redux';
 import { getCartCount } from '../../actions';
+import Modal from '../../components/Modal';
 import './searchbar.scss';
 
 export class SearchBar extends Component {
@@ -26,7 +27,7 @@ export class SearchBar extends Component {
   }
 
   render() {
-    return (
+    return (<Fragment>
       <div className="search-bar">
         <div className="control-container">
           <div className="search-bar-logo-container">
@@ -43,6 +44,7 @@ export class SearchBar extends Component {
             </div>
           </form>
           <div className="search-bar-nav">
+            <p className="cart-icon-container"><Link to="/cart" > <FontAwesomeIcon icon={faShoppingCart} /> <span className="cart-quantity">{this.props.cartCount}</span></Link></p>
             <p onClick={() => this.props.history.push('/help')}> Help </p>
             {
               !localStorage.getItem('BFT-token') ?
@@ -52,16 +54,19 @@ export class SearchBar extends Component {
                 >
                   Login
                 </p> :
-                <p onClick={() => this.logout()}>
-                  Logout
+                <>
+                  <p className="username" > Hi, Samuel </p>
+                  <p onClick={() => this.logout()}>
+                    Logout
                 </p>
+                </>
 
             }
-            <p className="cart-icon-container"><Link to="/cart" > <FontAwesomeIcon icon={faShoppingCart} /> <span className="cart-quantity">{this.props.cartCount}</span></Link></p>
           </div>
-          {/* <Auth /> */}
         </div>
       </div>
+      <Auth />
+    </Fragment>
     );
   }
 }

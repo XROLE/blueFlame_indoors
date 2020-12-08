@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import signUpReducer from './signUpReducer';
-import signInReducer from './signInReducer';
+import signInReducer from './signinReducer';
 import products from './productReducer';
 import cartCount from './cartReducer';
 

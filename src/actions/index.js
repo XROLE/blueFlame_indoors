@@ -3,6 +3,9 @@ import {
   SIGNUP_IN_PROGRESS,
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE,
+  SIGNIN_IN_PROGRESS,
+  SIGNIN_SUCCESS,
+  SIGNIN_FAILURE,
   GET_ALL_PRODUCTS_IN_PROGRESS,
   GET_ALL_PRODUCTS_SUCCESS,
   GET_ALL_PRODUCTS_FAILURE,
@@ -33,6 +36,29 @@ export const signUpAction = (userData) => (dispatch) => {
   .catch(error => {
     return dispatch({
       type: SIGNUP_FAILURE,
+      error: error.response.data.error
+    });
+  });
+};
+
+export const signInAction = (userData) => (dispatch) => {
+  dispatch({ type: SIGNIN_IN_PROGRESS });
+  return axios.post(
+    "https://blueflame-indoors-api.herokuapp.com/api/v1/users/login", userData
+  )
+  .then((data) => {
+    localStorage.setItem('BFT-token', data.data.token);
+    location.reload();
+    $('#exampleModalCenter').modal('hide');
+    return dispatch({
+      type: SIGNIN_SUCCESS,
+      user: data.data
+    });
+  })
+  .catch(error => {
+    console.log('I am a chosen one always ===> ', error);
+    return dispatch({
+      type: SIGNIN_FAILURE,
       error: error.response.data.error
     });
   });

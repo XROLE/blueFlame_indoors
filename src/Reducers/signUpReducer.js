@@ -3,7 +3,6 @@ import {
   SIGNUP_SUCCESS,
   SIGNUP_FAILURE
 } from '../actions/actionType';
-import { signUpAction } from '../actions';
 
 const defaultState = {
   inProgress: false,

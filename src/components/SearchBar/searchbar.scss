@@ -2,14 +2,22 @@
 
 .search-bar {
   position: fixed;
-  top: 55px;
+  top: 58px;
   z-index: 900;
   width: 100%;
-  bottom: 2%;
   text-align: center;
   margin: 0 auto;
   background-color: #ecedec;
   height: 65px;
+
+  .username {
+    font-weight: bold;
+    pointer-events: none;
+  }
+
+  .username:hover {
+    color: $text-color;
+  }
 
   .cart-icon-container {
     a {
@@ -29,31 +37,31 @@
   }
 
   &-logo-container {
-    width: 18%;
+    width: 10%;
     border-color: $primary;
     .logo {
       width: 100%;
     }
 
     .image-container {
-      width: 40%;
+      width: 75%;
     }
 
     .image-container-2 {
       width: 55%;
       overflow: hidden;
-      margin-top: 25%;
+      margin-top: 30%;
       margin-left: 15%;
     }
   }
 
   &-form {
     display: flex;
-    width: 65%;
+    width: 100%;
     margin: auto 0;
 
     &-input-container {
-      width: 80%;
+      width: 85%;
     }
 
     input {
@@ -76,11 +84,11 @@
 
   &-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 25px;
-    width: 17%;
+    width: 33%;
     p {
-      font-size: $primary-size;
+      font-size: $lower-primary;
       &:hover {
         cursor: pointer;
         color: $primary;

@@ -63,7 +63,7 @@ componentDidUpdate() {
         <div className="signUp-form-element-container">
           <input type="password" name="confirmPassword" placeholder="Confirm Password" onChange= { (e) => this.handleChange(e) }/>
           {
-            this.props.error &&  <p className="error-placeholder"> Error: {this.props.error}</p>
+            this.props.error &&  <p className="error-placeholder"> {this.props.error}</p>
           }
         </div>
         <button onClick = { (e) => this.handleSubmit(e) } disabled={this.props.inProgress}> Create Account</button>

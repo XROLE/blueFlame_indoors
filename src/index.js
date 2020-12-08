@@ -18,23 +18,23 @@ import '../node_modules/react-toastify/dist/ReactToastify.css';
 
 toast.configure();
 export class App extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       loading: true
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.setState({ loading: false });
   }
 
-  render () {
+  render() {
     return (
       <Fragment>
         <Navbar />
-        <SearchBar history={this.props.history}/>
-        <LandingPageContainer history = { this.props.history }/>
+        <SearchBar history={this.props.history} />
+        <LandingPageContainer history={this.props.history} />
         {this.state.loading && <AppSpinnerContainer />}
       </Fragment>
     );
@@ -45,15 +45,15 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route path="/" exact render={ (props) => <App { ...props } />} />
-        <Route path="/about" render={ (props) => <AboutContainer { ...props }/>} />
-        <Route path="/testimonies" render = { (props) => <TestimonyContainer { ...props } />} />
-        <Route path="/howitworks" render = { (props) => <HiwContainer { ...props } />} />
-        <Route path="/item" render={ (props) => <Item { ...props } />} />
-        <Route path="/help" render={ (props) => <Help { ...props } />} />
-        <Route path="/cart" render={ (props) => <Order { ...props } />} />
-     </Switch>
+        <Route path="/" exact render={(props) => <App {...props} />} />
+        <Route path="/about" render={(props) => <AboutContainer {...props} />} />
+        <Route path="/testimonies" render={(props) => <TestimonyContainer {...props} />} />
+        <Route path="/howitworks" render={(props) => <HiwContainer {...props} />} />
+        <Route path="/item" render={(props) => <Item {...props} />} />
+        <Route path="/help" render={(props) => <Help {...props} />} />
+        <Route path="/cart" render={(props) => <Order {...props} />} />
+      </Switch>
     </Router>
   </Provider>,
-   document.getElementById('App')
-  );
+  document.getElementById('App')
+);

@@ -7,9 +7,17 @@
   &-header-container {
     text-align: center;
   }
+
   &-loader-container {
     margin: 0 auto;
     text-align: center;
+  }
+
+  .error-placeholder {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
   }
 
   &-element-container {
@@ -31,8 +39,10 @@
 
   &-question-div {
     text-align: right;
+
     p {
       font-size: 12px;
+
       span {
         color: $primary;
         cursor: pointer;

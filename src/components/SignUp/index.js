@@ -15,23 +15,6 @@ export class SignUp extends Component {
       confirmPassword: "",
     };
   }
-componentDidUpdate() {
-  {
-    this.props.successMessage &&
-    toast(
-      this.props.successMessage,
-      {
-        position: toast.POSITION.TOP_CENTER,
-        bodyClassName: css({
-          background: '#FF8C00',
-          textAlign: 'center',
-          padding: '5px',
-          color: 'white'
-        })
-      }
-    );
-  }
-}
 
   handleChange (e) {
     return this.setState({

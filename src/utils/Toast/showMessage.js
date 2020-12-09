@@ -1,14 +1,14 @@
 import { toast } from 'react-toastify';
 import {css} from 'glamor';
 
-export const toastMessage = (errorMessage, status, autoCloseTime) => {
+export const toastMessage = (message, status, autoCloseTime) => {
   return toast(
-    errorMessage,
+    message,
       {
         bodyClassName: css({
             textAlign: 'center',
             borderRadius: '5px',
-            color: 'white'
+            color: 'black',
         }),
         autoClose: autoCloseTime,
         position: `${ (status=='success') ? toast.POSITION.TOP_CENTER : toast.POSITION.TOP_RIGHT }`,

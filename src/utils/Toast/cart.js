@@ -15,12 +15,12 @@ export const addToCart = (item) => {
   }
 
   if(cartItemIdArray.includes(item.id)){
-    return toastMessage(`${item.name} Already Exist`, null, 2000);
+    return toastMessage(`${item.name} Already Exist`, null, 1000);
   } else {
     cart.push(item);
     localStorage.setItem('cart', JSON.stringify(cart));
     const message = `Added ${item.name} `;
-    toastMessage(message, 'success', 2000);
+    toastMessage(message, 'success', 1000);
     return store.dispatch(getCartCount());
   }
 };

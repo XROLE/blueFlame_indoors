@@ -16,7 +16,9 @@ import Item from './components/Item';
 import Help from './components/Help';
 import '../node_modules/react-toastify/dist/ReactToastify.css';
 
-toast.configure();
+toast.configure({
+  hideProgressBar: true
+});
 export class App extends Component {
   constructor(props) {
     super(props);

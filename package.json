@@ -29,7 +29,7 @@
     "babel-loader": "^8.2.2",
     "bootstrap": "^4.5.3",
     "css-loader": "^3.6.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "glamor": "^2.20.40",
     "html-webpack-plugin": "^3.2.0",
     "import-glob-loader": "^1.1.0",
